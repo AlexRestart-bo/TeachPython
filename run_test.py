@@ -3,6 +3,13 @@ import unittest
 
 
 class RunnerTest(unittest.TestCase):
+
+    def setUp(self):
+        print("setup")
+    @classmethod
+    def setUpClass(cls):
+        print("MegaSetup")
+
     def test_walk(self):
         num_run = run.Runner('obj1')
         for _ in range(10):
